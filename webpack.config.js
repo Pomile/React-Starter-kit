@@ -95,7 +95,7 @@ module.exports = {
             chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
         }),
         new HtmlWebpackPlugin({
-            title: 'Home',
+            title: 'Starter-kit',
             filename: 'index.html',
             template: 'index.html',
         }),
