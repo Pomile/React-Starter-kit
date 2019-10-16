@@ -48,8 +48,21 @@ module.exports = {
             {
                 test: /\.(sa|sc|c)ss$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            modules: true,
+                            localsConvention: 'asIs'
+                        },
+                    },
+                    {
+                        loader: require.resolve('css-loader'),
+                        options: {
+                            importLoaders: 1,
+                            modules: true,
+                            localsConvention: 'asIs'
+                        },
+                    },
                 ],
             },
             {
