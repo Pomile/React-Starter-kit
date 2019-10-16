@@ -18,7 +18,10 @@ module.exports = {
     devServer: {
         contentBase: __dirname,
         port: 8080,
-        hot: true
+        hot: true,
+        publicPath: '/',
+        historyApiFallback: true,
+        writeToDisk: true
     },
     optimization: devMode ? {} : {
         minimizer: [
